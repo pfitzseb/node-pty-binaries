@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 jobs:
-- job: Linux-Electron
+- job: Linux_Electron
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
@@ -21,7 +21,7 @@ jobs:
     env:
       GITHUB_RELEASE_TOKEN: $(GITHUB_RELEASE_TOKEN)
     displayName: 'Prebuild and publish'
-- job: Linux-Node
+- job: Linux_Node
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
@@ -38,7 +38,7 @@ jobs:
     env:
       GITHUB_RELEASE_TOKEN: $(GITHUB_RELEASE_TOKEN)
     displayName: 'Prebuild and publish'
-- job: macOS-Electron
+- job: macOS_Electron
   pool:
     vmImage: 'xcode9-macos10.13'
   steps:
@@ -54,7 +54,7 @@ jobs:
     env:
       GITHUB_RELEASE_TOKEN: $(GITHUB_RELEASE_TOKEN)
     displayName: 'Prebuild and publish'
-- job: macOS-Node
+- job: macOS_Node
   pool:
     vmImage: 'xcode9-macos10.13'
   steps:
@@ -70,7 +70,7 @@ jobs:
     env:
       GITHUB_RELEASE_TOKEN: $(GITHUB_RELEASE_TOKEN)
     displayName: 'Prebuild and publish'
-- job: Windows-Electron
+- job: Windows_Electron
   pool:
     vmImage: 'vs2017-win2016'
   steps:
@@ -94,7 +94,7 @@ jobs:
     env:
       GITHUB_RELEASE_TOKEN: $(GITHUB_RELEASE_TOKEN)
     displayName: 'Prebuild and publish'
-- job: Windows-Node
+- job: Windows_Node
   pool:
     vmImage: 'vs2017-win2016'
   steps:
